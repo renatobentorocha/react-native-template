@@ -1,0 +1,38 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "es6": true
+  },
+  "extends": ["airbnb", "prettier"],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly",
+    "__DEV__": true
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "prettier", "react-hooks"],
+  "rules": {
+    "react/jsx-filename-extension": ["error", {"extensions": [".js", ".jsx"]}],
+    "import/prefer-default-export": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
+
+    // "react/jsx-filename-extension": [1, {"extensions": [".js", ".jsx"]}]
+  },
+  "settings": {
+    "import/resolver": {
+      "root-import": {
+        "rootPathPrefix": "~",
+        "rootPathSuffix": "src",
+        "extensions": [".js", ".android.js", ".ios.js"]
+      }
+    }
+  }
+}
